@@ -38,3 +38,10 @@ vendor/
 
 # Other ignores
 EOT
+**/data/*.txt
+**/data/*.txt
+**/data/*.txt
+**/data/*.txt
+**/data/*.txt
+**/data/*.txt
+**/data/*.txt

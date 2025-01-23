@@ -86,6 +86,21 @@ def add_data_for_word(word_data, word, gender, rating):
 
 
 def read_file(filename):
+    """
+    Reads the information from the specified file and builds a new
+    word_data dictionary with the data found in the file. Returns the
+    newly created dictionary.
+
+    Input:
+        filename (str): name of the file holding professor review data
+
+    >>> read_file('data/small-one.txt')
+    {'okay': {'W': [0, 0, 0], 'M': [0, 1, 0]}, 'best': {'W': [0, 0, 1], 'M': [0, 0, 0]}}
+    >>> read_file('data/small-two.txt')
+    {'awesome': {'W': [0, 0, 2], 'M': [0, 0, 1]}, 'teacher': {'W': [0, 0, 1], 'M': [0, 0, 1]}, 'class': {'W': [0, 0, 1], 'M': [0, 0, 0]}}
+    >>> read_file('data/small-three.txt')
+    {'average': {'W': [0, 0, 0], 'M': [1, 3, 0]}, 'best': {'W': [0, 0, 3], 'M': [1, 0, 0]}, 'not': {'W': [0, 0, 0], 'M': [2, 0, 0]}}
+    """
     word_data = {}
     try:
         with open(filename, 'r') as file:

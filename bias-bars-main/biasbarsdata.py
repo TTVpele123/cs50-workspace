@@ -152,31 +152,32 @@ def search_words(word_data, target):
 
 
 
-
-
+def search_words(word_data, target):
     """
-    (This function is provided for you)
-    Given a word_data dictionary, print out all its data, one word per line.
-    The words are printed in alphabetical order,
-    with the corresponding frequency data displayed in order
-    of associated review quality for each gender.
-
-    This code makes use of the sorted function, which is given as input a
-    list of elements and returns a list containing the same elements sorted in
-    increasing order. For strings, "increasing" order maps to alphabetical
-    ordering.
+    Given a word_data dictionary that stores word frequency information and a target string,
+    returns a list of all words in the dictionary that contain the target string. This
+    function should be case-insensitive with respect to the target string.
 
     Input:
-        word_data (dictionary): a dictionary containing word frequency data organized by gender and rating quality
+        word_data (dictionary): a dictionary containing word frequency data
+        target (str): a string to look for in the names contained within word_data
+
+    Returns:
+        matching_words (List[str]): a list of all words from word_data that contain
+                                    the target string
     """
+    # lowercase the target so we search case-insensitively
+    target = target.lower()
+    # make our list of words
+    matching_words = []
 
+    for word in word_data:
+        # if the target is in our current word, add it to the list
+        if target in word:
+            matching_words.append(word)
 
-def print_words(word_data):
-    for word in sorted(word_data):
-        data = word_data[word]
-        women_data = data[KEY_WOMEN]
-        men_data = data[KEY_MEN]
-        print(word + ": Women -->" +str(women_data) + ", MEN -> " + str(men_data))
+    return matching_words
+
 
 
 def main():

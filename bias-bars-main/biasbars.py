@@ -117,15 +117,16 @@ def plot_word(canvas, word_data, word):
         canvas.create_rectangle(
             x - BAR_WIDTH / 2, height - VERTICAL_MARGIN - bar_height_men,
             x, height - VERTICAL_MARGIN,
-            fill="blue"
+            fill="dodgerblue"
+        )
+        canvas.create_text(
+            x - BAR_WIDTH / 2 +TEXT_DW, height - VERTICAL_MARGIN - bar_height_women,
+            text"W", anchor=tinker.NW
 
         )
-        #womanBar
-        canvas.create_rectangle(
-            x, height - VERTICAL_MARGIN - bar_height_women,
-            x + BAR_WIDTH / 2, height - VERTICAL_MARGIN,
-            fill="pink"
-        )
+
+
+
 
     # Note: You find it helpful to use the KEY_WOMEN and KEY_MEN constants
     # defined in the biasbarsdata file. To see how to use these constants,

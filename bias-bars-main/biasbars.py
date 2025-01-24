@@ -109,7 +109,7 @@ def plot_word(canvas, word_data, word):
         print(f"Label: {freq_label} at position ({LEFT_MARGIN - LABEL_OFFSET}, {y})")#display the frequency value as tect nd align the texts right center corner edge to the specified lo
 
     canvas.create_text(
-        LEFT_MARGIN - LABEL_OFFSET, y, text=str(freq_label,)
+        LEFT_MARGIN - LABEL_OFFSET, y, text=str(freq_label),
         anchor=tkinter.E  # Align text to the right
     )
 #plot bars

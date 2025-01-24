@@ -148,7 +148,7 @@ def plot_word(canvas, word_data, word):
         canvas.create_text(
             x + BAR_WIDTH, height - VERTICAL_MARGIN - bar_height_men,
             text = "M",
-            anchor=tkinter.NW
+            anchor=tkinter.W
         )
 
 

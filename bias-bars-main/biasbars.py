@@ -115,12 +115,12 @@ def plot_word(canvas, word_data, word):
 
         #bar for womern
         canvas.create_rectangle(
-            x - BAR_WIDTH / 2, height - VERTICAL_MARGIN - bar_height_men,
+            x - BAR_WIDTH / 2, height - VERTICAL_MARGIN - bar_height_women,
             x, height - VERTICAL_MARGIN,
             fill="dodgerblue"
         )
         canvas.create_text(
-            x - BAR_WIDTH / 2 + TEXT_DX, height - VERTICAL_MARGIN - bar_height_women,
+            x - BAR_WIDTH / 4, height - VERTICAL_MARGIN - bar_height_women,
             text = "W"
         )
         #Men BAr
@@ -130,7 +130,7 @@ def plot_word(canvas, word_data, word):
             fill="orange"
         )
         canvas.create_text(
-            x + TEXT_DX, height - VERTICAL_MARGIN - bar_height_men,
+            x + BAR_WIDTH / 4, height - VERTICAL_MARGIN - bar_height_men,
             text = "M"
         )
 

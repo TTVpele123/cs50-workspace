@@ -112,6 +112,7 @@ def plot_word(canvas, word_data, word):
         LEFT_MARGIN - LABEL_OFFSET, y, text=str(freq_label),
         anchor=tkinter.E  # Align text to the right
     )
+    print(f"Label: {freq_label} at position ({LEFT_MARGIN - LABEL_OFFSET}, {y})")
 #plot bars
     for idx in range(len(LABELS)):
         x = get_centered_x_coordinate(width, idx)

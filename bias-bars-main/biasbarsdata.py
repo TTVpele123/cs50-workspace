@@ -102,26 +102,18 @@ def read_file(filename):
     {'average': {'W': [0, 0, 0], 'M': [1, 3, 0]}, 'best': {'W': [0, 0, 3], 'M': [1, 0, 0]}, 'not': {'W': [0, 0, 0], 'M': [2, 0, 0]}}
     """
     word_data = {}
-    try:
-        with open(filename, 'r') as file:
-             next(file) #skips the header line
-             for line in file:
-                parts = line.strip().split(',')
-                if len(parts) != 3:
-                    continue # for lines that dont have 3 linespr or are just malformed
+    file = open(filename, 'r')
+    next(file) #skips the header
+    for line in file:
+        parts = line.strip().split(',',2)
+        rating_str, gender, comment = parts
+        rating = float(rating_str)
+        words = comment.split()
+        for word in words:
+            add_data_for_word(word_data, word, gender, rating)
+            file.close
+            return word_data
 
-                word, gender, rating_str = parts
-
-                try:
-                    rating = float(rating_str) #if the variable cant be truend into a flaot
-                except ValueError: #when it cant be converted into an int/flt
-                    continue #skips lines with invalid rating
-
-                add_data_for_word(word_data, word, gender, rating)
-
-    except FileNotFoundError:
-        print(f"Error: File '{filename}' not found.")
-    return word_data
 
 
 def search_words(word_data, target):

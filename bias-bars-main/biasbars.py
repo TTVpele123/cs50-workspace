@@ -99,7 +99,7 @@ def plot_word(canvas, word_data, word):
     width = canvas.winfo_width()
     height = canvas.winfo_height()
     gender_data = word_data[word]
-    max_frequency = max(max(gender_data[biasbarsdata.KEY_WOMEN]), max(gender_data[biasbarsdata.KEY_MEN]))
+    max_frequency = max(max(gender_data["W"]), max(gender_data["M"]))
 
 #drawing the y axis labkes and tijcs
     for i in range (NUM_VERTICAL_DIVISIONS + 1):

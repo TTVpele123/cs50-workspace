@@ -198,6 +198,8 @@ def main():
             print(word)
     else:
         print_words(word_data)
+        for word, data in word_data.items():
+            print(f"{word}: {data}")
 
 
 if __name__ == '__main__':

@@ -121,10 +121,18 @@ def plot_word(canvas, word_data, word):
         )
         canvas.create_text(
             x - BAR_WIDTH / 2 +TEXT_DW, height - VERTICAL_MARGIN - bar_height_women,
-            text"W", anchor=tinker.NW
-
+            text"W"
         )
 
+canvas.create_rectangle(
+            x - BAR_WIDTH / 2, height - VERTICAL_MARGIN - bar_height_men,
+            x, height - VERTICAL_MARGIN,
+            fill="dodgerblue"
+        )
+        canvas.create_text(
+            x - BAR_WIDTH / 2 +TEXT_DW, height - VERTICAL_MARGIN - bar_height_women,
+            text"W"
+        )
 
 
 

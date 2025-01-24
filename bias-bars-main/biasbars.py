@@ -104,8 +104,10 @@ def plot_word(canvas, word_data, word):
 
 #drawing the y axis labkes and tijcs
     for i in range(NUM_VERTICAL_DIVISIONS + 1):
-        y = VERTICAL_MARGIN + i * (height - 2 * VERTICAL_MARGIN) / NUM_VERTICAL_DIVISIONS #calculates the vertical positisn / y-coordinat of the current tick mark
-        freq_label = round(max_frequency * (NUM_VERTICAL_DIVISIONS - i) / NUM_VERTICAL_DIVISIONS) #determise the frequency value corresponding to the current tic the higher the frequency the highter tick
+        y = VERTICAL_MARGIN + i * (height - 2 * VERTICAL_MARGIN) / NUM_VERTICAL_DIVISIONS
+        #calculates the vertical positisn / y-coordinat of the current tick mark
+        freq_label = round(max_frequency * (NUM_VERTICAL_DIVISIONS - i) / NUM_VERTICAL_DIVISIONS)
+        #determise the frequency value corresponding to the current tic the higher the frequency the highter tick
 
 
         canvas.create_line(

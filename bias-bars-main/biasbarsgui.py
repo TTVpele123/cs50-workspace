@@ -3,7 +3,7 @@ File: biasbarsgui.py
 ------------------------
 Stanford CS106A Bias Bars
 Adapted from the original Bias Bars assignment (created
-by Colin Kincaid, Annie Hu, Jennie Yang, and Monica 
+by Colin Kincaid, Annie Hu, Jennie Yang, and Monica
 Anuforo) by Nick Bowman and Katie Creel
 
 This file defines the functions needed to create the GUI for
@@ -59,7 +59,8 @@ def handle_plot(entry, canvas, word_data, error_out, plot):
     (provided)
     Called when <return> key hit in given entry text field.
     Gets search text from given entry, draws results
-    to the given canvas.
+    to the given canvas.python3 biasbars.py
+
     """
     text = entry.get()
 

@@ -164,6 +164,7 @@ def convert_counts_to_frequencies(word_data):
 def main():
     # (This function is provided for you)
     import sys
+    FILENAME = "data/full-data.txt"
     from biasbarsdata import read_file, print_words  # Import functions from biasbarsdata
     args = sys.argv[1:]
 

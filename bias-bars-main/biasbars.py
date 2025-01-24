@@ -106,7 +106,7 @@ def plot_word(canvas, word_data, word):
         y = VERTICAL_MARGIN + i * (height - 2 * VERTICAL_MARGIN) / NUM_VERTICAL_DIVISIONS #calculates the vertical positisn / y-coordinat of the current tick mark
         freq_label = round(max_frequency * (NUM_VERTICAL_DIVISIONS - i) / NUM_VERTICAL_DIVISIONS) #determise the frequency value corresponding to the current tic the higher the frequency the highter tick
         canvas.create_line(LEFT_MARGIN - TICK_WIDTH / 2, y, LEFT_MARGIN + TICK_WIDTH / 2, y) # start and end point fo the tick
-        print(f"Label: {freq_label} at position ({LEFT_MARGIN - LABEL_OFFSET}, {y})")#display the frequency value as tect nd align the texts right center corner edge to the specified lo
+    print("Label: {freq_label}({LEFT_MARGIN - LABEL_OFFSET}, {y})")#display the frequency value as tect nd align the texts right center corner edge to the specified lo
 
     canvas.create_text(
         LEFT_MARGIN - LABEL_OFFSET, y, text=str(freq_label),

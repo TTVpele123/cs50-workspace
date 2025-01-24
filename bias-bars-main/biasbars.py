@@ -103,33 +103,17 @@ def plot_word(canvas, word_data, word):
 
 #drawing the y axis labkes and tijcs
     for i in range (NUM_VERTICAL_DIVISIONS + 1):
-        y = VERTICAL_MARGIN + i * (height - 2 * VERTICAL_MARGIN) / NUM_VERTICAL_DIVISIONS
-    #calculates the vertical positisn / y-coordinat of the current tick mark
-    #the plotting area is scaled evenly between the top and bottom margins
-
-    freq_label= round(max_frequency * (NUM_VERTICAL_DIVISIONS - i) / NUM_VERTICAL_DIVISIONS)
-    #determise the frequency value corresponding to the current tic the higher the frequency the highter tick
-
-    canvas.create_line(
-         LEFT_MARGIN - TICK_WIDTH / 2, y, #start posotion of the tick
-         LEFT_MARGIN + TICK_WIDTH / 2, y, #end point fo the tick
-    )
-    #draws a horizontal tick at y-cord
-    canvas.create_text(
-         LEFT_MARGIN - LABEL_OFFSET, y, #position the label left of tick mark
-         text=str(freq_label), #display the frequency value as tect
-         anchor=tkinter.E #align the texts right center corner edge to the specified lo
-    )
-
-
-
-    #plot bars
+        y = VERTICAL_MARGIN + i * (height - 2 * VERTICAL_MARGIN) / NUM_VERTICAL_DIVISIONS #calculates the vertical positisn / y-coordinat of the current tick mark
+        freq_label= round(max_frequency * (NUM_VERTICAL_DIVISIONS - i) / NUM_VERTICAL_DIVISIONS) #determise the frequency value corresponding to the current tic the higher the frequency the highter tick
+        canvas.create_line(LEFT_MARGIN - TICK_WIDTH / 2, y, LEFT_MARGIN + TICK_WIDTH / 2, y) # start and end point fo the tick
+        canvas.create_text(LEFT_MARGIN - LABEL_OFFSET, y, text=str(freq_label), anchor=tkinter.E) #display the frequency value as tect nd align the texts right center corner edge to the specified lo
+#plot bars
     for idx in range(len(LABELS)):
         x = get_centered_x_coordinate(width, idx)
-        bar_height_men = (gender_data[biasbarsdata.KEY_MEN][idx] / max_frequency) * (height - 2 * VERTICAL_MARGIN)
-        bar_height_women = (gender_data[biasbarsdata.KEY_WOMEN][idx] / max_frequency) * (height - 2 * VERTICAL_MARGIN)
-        #men bar
+        bar_height_men = (gender_data["M"][idx] / max_frequency) * (height - 2 * VERTICAL_MARGIN)
+        bar_height_women = (gender_data["W"][idx] / max_frequency) * (height - 2 * VERTICAL_MARGIN)
 
+        #bar for womern
         canvas.create_rectangle(
             x - BAR_WIDTH / 2, height - VERTICAL_MARGIN - bar_height_men,
             x, height - VERTICAL_MARGIN,

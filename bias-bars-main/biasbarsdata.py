@@ -169,6 +169,7 @@ def search_words(word_data, target):
 
 
 def main():
+    # (This function is provided for you)
     import sys
     args = sys.argv[1:]
 
@@ -194,12 +195,10 @@ def main():
     # Either we do a search or just print everything.
     if len(target) > 0:
         search_results = search_words(word_data, target)
-        if target in word:
+        for word in search_results:
             print(word)
     else:
         print_words(word_data)
-        for word, data in word_data.items():
-            print(f"{word}: {data}")
 
 
 if __name__ == '__main__':

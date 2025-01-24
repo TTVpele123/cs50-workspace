@@ -100,14 +100,15 @@ def read_file(filename):
     file = open(filename, 'r')
     next(file) #skips the header
     for line in file:
-        parts = line.strip().split(',',2)
-        rating_str, gender, comment = parts
-        rating = float(rating_str)
-        words = comment.split()
+        parts = line.strip().split(',', 2)
+        if len(parts) == 3:
+            rating_str, gender, comment = parts
+            rating = float(rating_str)
+            words = comment.split()
         for word in words:
             add_data_for_word(word_data, word, gender, rating)
-            file.close
-            return word_data
+    file.close
+    return word_data
 
 
 

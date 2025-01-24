@@ -75,14 +75,9 @@ def add_data_for_word(word_data, word, gender, rating):
     """
 
     if word not in word_data:
-        word_data[word] = {
-            KEY_WOMEN: [0, 0, 0],
-            KEY_MEN: [0, 0, 0]
-        }
-
+        word_data[word] = {"W": [0, 0, 0], "M": [0, 0, 0]}
     bucket_index = convert_rating_to_index(rating)
-
-    word_data[word][gender][bucket_index] +=1
+    word_data[word][gender][bucket_index] += 1
 
 
 def read_file(filename):

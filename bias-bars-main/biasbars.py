@@ -162,6 +162,7 @@ def convert_counts_to_frequencies(word_data):
 
 # main() code is provided for you
 def main():
+"""
     import sys
     args = sys.argv[1:]
     global WINDOW_WIDTH
@@ -169,7 +170,7 @@ def main():
     if len(args) == 2:
         WINDOW_WIDTH = int(args[0])
         WINDOW_HEIGHT = int(args[1])
-
+"""
     # Load data
     word_data = biasbarsdata.read_file(FILENAME)
     convert_counts_to_frequencies(word_data)

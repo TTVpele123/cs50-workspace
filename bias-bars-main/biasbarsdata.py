@@ -39,7 +39,7 @@ def convert_rating_to_index(rating):
     """
     if rating < 2.5:
         return 0
-    elif 2.5 <= rating <= 3.5:
+    elif rating <= 3.5:
         return 1
     else:
         return 2

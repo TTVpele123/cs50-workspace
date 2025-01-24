@@ -110,8 +110,8 @@ def plot_word(canvas, word_data, word):
 #plot bars
     for idx in range(len(LABELS)):
         x = get_centered_x_coordinate(width, idx)
-        bar_height_men = (gender_data["M"][idx] / max_frequency) * (height - 2 * VERTICAL_MARGIN)
         bar_height_women = (gender_data["W"][idx] / max_frequency) * (height - 2 * VERTICAL_MARGIN)
+        bar_height_men = (gender_data["M"][idx] / max_frequency) * (height - 2 * VERTICAL_MARGIN)
 
         #bar for womern
         canvas.create_rectangle(

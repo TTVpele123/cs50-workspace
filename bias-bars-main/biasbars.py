@@ -162,30 +162,37 @@ def convert_counts_to_frequencies(word_data):
 
 # main() code is provided for you
 def main():
-"""
+    # (This function is provided for you)
     import sys
     args = sys.argv[1:]
-    global WINDOW_WIDTH
-    global WINDOW_HEIGHT
-    if len(args) == 2:
-        WINDOW_WIDTH = int(args[0])
-        WINDOW_HEIGHT = int(args[1])
-"""
-    # Load data
-    word_data = biasbarsdata.read_file(FILENAME)
-    convert_counts_to_frequencies(word_data)
 
-    # Make window
-    top = tkinter.Tk()
-    top.wm_title('Bias Bars')
-    canvas = gui.make_gui(top, WINDOW_WIDTH, WINDOW_HEIGHT, word_data, plot_word, biasbarsdata.search_words)
+    if len(args) == 0:
+        return
+    # Two command line forms
+    # 1. data_file
+    # 2. -search target data_file
 
-    # draw_fixed once at startup so we have the borders and labels
-    # even before the user types anything.
-    draw_fixed_content(canvas)
+    # Assume no search, so filename to read
+    # is the first argument
+    filename = args[0]
 
-    # This needs to be called just once
-    top.mainloop()
+    # Check if we are doing search, set target variable
+    target = ''
+    if len(args) >= 2 and args[0] == '-search':
+        target = args[1]
+        filename = args[2]  # Update filename to skip first 2 args
+
+    # Read in the data from the file name
+    word_data = read_file(filename)
+
+    # Either we do a search or just print everything.
+    if len(target) > 0:
+        search_results = search_words(word_data, target)
+        for word in search_results:
+            print(word)
+    else:
+        print_words(word_data)
+
 
 if __name__ == '__main__':
     main()

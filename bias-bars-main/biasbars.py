@@ -125,7 +125,7 @@ def plot_word(canvas, word_data, word):
         )
         #Men BAr
         canvas.create_rectangle(
-            x - height - VERTICAL_MARGIN - bar_height_men,
+            x, height - VERTICAL_MARGIN - bar_height_men,
             x, + BAR_WIDTH / 2, height - VERTICAL_MARGIN,
             fill="orange"
         )

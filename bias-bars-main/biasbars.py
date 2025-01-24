@@ -122,6 +122,7 @@ def plot_word(canvas, word_data, word):
         canvas.create_text(
             x - BAR_WIDTH / 2, height - VERTICAL_MARGIN - bar_height_women,
             text = "W"
+            anchor=tkinter.NW
         )
         #Men BAr
         canvas.create_rectangle(
@@ -132,6 +133,7 @@ def plot_word(canvas, word_data, word):
         canvas.create_text(
             x + BAR_WIDTH / 10, height - VERTICAL_MARGIN - bar_height_men,
             text = "M"
+            anchor=tkinter.NW
         )
 
 

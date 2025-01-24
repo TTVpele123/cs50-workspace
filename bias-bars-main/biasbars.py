@@ -95,7 +95,7 @@ def plot_word(canvas, word_data, word):
         word (str): The word whose frequency distribution you want to plot
     """
 
-    draw_fixed_content(canvas) #clears and redraes the contect
+    draw_fixed_content(canvas,) #clears and redraes the contect
     width = canvas.winfo_width()
     height = canvas.winfo_height()
     gender_data = word_data[word]

@@ -130,7 +130,7 @@ def plot_word(canvas, word_data, word):
             fill="orange"
         )
         canvas.create_text(
-            x + BAR_WIDTH / 3, height - VERTICAL_MARGIN - bar_height_men,
+            x + BAR_WIDTH / 4, height - VERTICAL_MARGIN - bar_height_men,
             text = "M"
         )
 

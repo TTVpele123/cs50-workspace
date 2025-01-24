@@ -8,6 +8,7 @@ import tkinter
 import biasbarsdata
 import biasbarsgui as gui
 
+#h
 
 # Provided constants to load and plot the word frequency data
 WINDOW_WIDTH = 1000
@@ -144,7 +145,7 @@ def plot_word(canvas, word_data, word):
         canvas.create_text(
             x + BAR_WIDTH, height - VERTICAL_MARGIN - bar_height_men,
             text = "M",
-            anchor=tkinter.N
+            anchor=tkinter.NW
         )
 
 
